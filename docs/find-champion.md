@@ -1,7 +1,7 @@
   
-# Viewing Champions
+# Finding Champions
 
-Purpose of call.
+Call the `find_champion` endpoint to 
 
 Example request:
 
@@ -22,7 +22,7 @@ def find_champion(name=None, role=None, origin=None):
  return champion_suggestions
 ```
 
-Example response:
+A successful call returns the following JSON array. See [Champion Attributes](#champion-attributes) for details that are displayed for players:
 
 ```
 champion_data = [
@@ -53,3 +53,10 @@ champion_data = [
  }
 ]
 ```
+
+## Champion Attributes
+| Attribute | Description | 
+| --------- | ----------- |
+| Name | The champion's name |
+| Role | |
+| Origin | The location within Runeterra where the champion originated |
