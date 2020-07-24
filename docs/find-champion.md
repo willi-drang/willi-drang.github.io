@@ -1,14 +1,27 @@
   
 # Finding Champions
 
-Call the `find_champion` endpoint to 
+Call the `find_champion` endpoint to display a list of champions and attributes that can help players selecting the best champions for their teams.
+
+<!--Add any prerequisites-->
+
+For each champion, the call returns the following attributes:
+
+| Attribute | Description | 
+| --------- | ----------- |
+| Name | The champion's name |
+| Role | The champion's role, which is useful for assembling a strategically balanced team |
+| Origin | The location within Runeterra where the champion originated |
+
+<!--I'm totally guessing on the Python logic here.-->
+You can structure the call so that the endpoint returns results even if the `role` or `origin` attributes do not return a match.
 
 Example request:
 
 ```
 def find_champion(name=None, role=None, origin=None):
  champion_suggestions = []
- for champ in champion_data:
+ for champ in champion_data:  
    if name:
      if champ['name'] == name:
        return [champ]
@@ -22,7 +35,7 @@ def find_champion(name=None, role=None, origin=None):
  return champion_suggestions
 ```
 
-A successful call returns the following JSON array. See [Champion Attributes](#champion-attributes) for details that are displayed for players:
+A successful call returns the following JSON array: 
 
 ```
 champion_data = [
@@ -54,10 +67,14 @@ champion_data = [
 ]
 ```
 
-## Champion Attributes
 
-| Attribute | Description | 
-| --------- | ----------- |
-| Name | The champion's name |
-| Role | |
-| Origin | The location within Runeterra where the champion originated |
+## Response Codes
+
+See the following code descriptions for responses:
+
+<!--Totally making these up.-->
+
+| Code | Description |
+| ---- | ----------- |
+| `200` | Request was successful. A data array accompanies this code. |
+
