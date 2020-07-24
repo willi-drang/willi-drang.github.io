@@ -55,6 +55,7 @@ champion_data = [
 ```
 
 ## Champion Attributes
+
 | Attribute | Description | 
 | --------- | ----------- |
 | Name | The champion's name |
